@@ -88,6 +88,7 @@ body {
     color: #333333;
     overflow: visible;
 }
+
 @media screen and (max-width: 800px) {
     .header-logo_item {
         overflow: hidden;
@@ -124,13 +125,15 @@ button {
 .header-search_form {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 .header-search_input {
     border: none;
     border-bottom: 1px solid #333333;
-    width: 320px;
+    min-width: 100px;
     padding: 7px 0 6px;
+    width: 100%;
 }
 
 .header-search_button {
@@ -150,11 +153,13 @@ button {
 .search-btn:active {
     opacity: .75;
 }
+
 .header_login {
     width: 32.97%;
     text-align: end;
 }
-.header_login-button {
+
+.login-btn {
     background: #E5261E;
     color: white;
     border-radius: 4px;
@@ -193,8 +198,8 @@ button {
     color: #333333;
 }
 
-.nav_item-tv {
-
+.nav-item_activ {
+ color:#E5261E;
 }
 
 .item_tv-link {
@@ -220,7 +225,7 @@ button {
 }
 
 .section-movies h3 {
-    padding: 28px 0 15px 0;
+    padding: 6px 0 15px 0;
 }
 
 h3 {
@@ -361,6 +366,7 @@ img {
     align-items: center;
     justify-content: center;
 }
+
 .channel-program {
     width: 66.1%;
     display: flex;
@@ -368,6 +374,7 @@ img {
     padding: 20px 0 19px;
     justify-content: space-between;
 }
+
 .channel-name {
     font-weight: 500;
     font-size: 20px;
@@ -375,12 +382,14 @@ img {
     color: #333333;
     padding-bottom: 17px;
 }
+
 .program {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .program-item:first-child {
     color: #E5261E;
 }
@@ -390,9 +399,11 @@ img {
     font-size: 16px;
     line-height: 19px
 }
+
 .time {
     padding-right: 20px;
 }
+
 /* footer styles */
 .footer {
     flex: 0 0 auto;
@@ -440,7 +451,6 @@ img {
 
 .poster {
     position: relative;
-
 }
 
 .descr {
@@ -478,4 +488,90 @@ img {
 
 .hide-show:target {
     display: block;
+}
+
+/* login styles*/
+.window-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-window {
+    background: #FFFFFF;
+    width: 304px;
+    border-radius: 8px;
+    padding: 36px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.login-title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.form-input_login {
+    width: 100%;
+}
+.form-input {
+    margin-bottom: 29px;
+}
+.form-input::after {
+    content: "";
+    display: block;
+    /* border: 1px solid black; */
+    width: 76%;
+    height: 1px;
+    background: #333333;
+    position: absolute;
+    top: 117px;
+    left: 36px;
+}
+.input-item {
+    border: none;
+    padding: 0;
+}
+.form-checkobx {
+    margin-bottom: 110px;
+}
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    background: #FFFFFF;
+    margin-right: 8px;
+}
+
+.custom-checkbox:checked + label::before {
+    border-color: #333333;
+    background-image: url(../img/check/Vector.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.form-btn {
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    text-align: center;
 }

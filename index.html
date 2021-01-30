@@ -39,11 +39,11 @@
     <div class="wrapper">
         <div class="main_wrapper">
             <ul class="main-nav">
-                <li class="nav-item nav_item-film">
+                <li class="nav-item nav_item-film nav-item_activ">
                     <a href="#movi" class="item_tv-link item-tabs"><h2>Фильмы</h2></a>
                 </li>
 
-                <li class="nav-item nav_item-tv">
+                <li class="nav-item nav_item-tv nav-item_activ">
                     <a href="#tvprog" class="item_tv-link item-tabs"><h2>Телеканалы</h2></a>
                 </li>
 
@@ -245,6 +245,27 @@
         </div>
     </div>
 </footer>
-<script src="js/main.js"></script>
+<div class="login-window window-center">
+    <form action="">
+        <h1 class="login-title">Вход</h1>
+        <div class="form-input">
+            <label for="login" class="sr-only">Логин</label>
+            <input type="text" id="login" class="form-input_login input-item" placeholder="Логин">
+        </div>
+        <div class="form-input">
+            <label for="pass" class="sr-only">Пароль</label>
+            <input type="password" id="pass" class="form-input_password input-item" placeholder="Пароль">
+        </div>
+        <div class="form-checkobx">
+            <input type="checkbox" class="custom-checkbox" id="checkbox" value="remember">
+            <label for="checkbox">Запомнить</label>
+        </div>
+        <div class="form-btn">
+            <button class="login-btn btn">Войти</button>
+        </div>
+
+
+    </form>
+</div>
 </body>
 </html>
