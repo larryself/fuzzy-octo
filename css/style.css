@@ -160,6 +160,7 @@ button {
 .main-nav {
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 
 .nav-item {
@@ -186,12 +187,10 @@ button {
 
 .item_tv-link:hover {
     color: #E5261E;
-
 }
 
 /* movies styles*/
 .movies {
-    display: none;
 }
 
 .section-movies {
@@ -317,21 +316,30 @@ img {
 }
 
 .tv-channel {
-
+    overflow: auto;
+    height: 696px;
 }
 
 .channel {
+    display: flex;
+    height: 162px;
     background: #F2F2F2;
     border-radius: 8px;
-    padding: 21px 0 18px;
-    position: relative;
+    margin-bottom: 16px;
 }
 
+.channel:last-child {
+    margin-bottom: 0;
+}
+.channel-logo {
+    width: 33.9%;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .channel img {
-    position: absolute;
-    transform: translate(-50%, 50%);
-    bottom: 50%;
-    left: 16.92%;
 }
 
 .channel h3 {
@@ -340,6 +348,8 @@ img {
     line-height: 24px;
     color: #333333;
 }
+
+
 
 .channel div:first-child {
     color: #E5261E;
@@ -427,4 +437,13 @@ address {
     /* or 22px */
     /* Gray 6 */
     color: #F2F2F2;
+}
+
+
+.hide-show {
+    display: none;
+}
+
+.hide-show:target {
+    display: block;
 }
