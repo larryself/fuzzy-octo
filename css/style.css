@@ -158,10 +158,15 @@ button {
     width: 32.97%;
     text-align: end;
 }
-
-.login-btn {
+#not-autorized {
+    display: block;
+}
+#autorized {
+    display: none;
+}
+.login-enter {
     background: #E5261E;
-    color: white;
+    color: #FFFFFF;
     border-radius: 4px;
     border: none;
     padding: 9px 32px 10px;
@@ -170,7 +175,22 @@ button {
 .login-btn:hover {
     background: #CC221B;
 }
-
+.login-exit {
+    border: none;
+    background: #FFFFFF;
+    color: #E5261E;
+    padding: 9px 0px 10px 16px;
+}
+.login-enter: hover {
+    opacity: 0.8;
+}
+.autorized-input {
+    border: none;
+    color: #333333;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
 /* main styles */
 .main {
     flex: 1 0 auto;
@@ -196,6 +216,8 @@ button {
     line-height: 33px;
     text-align: right;
     color: #333333;
+    padding: 12px;
+    cursor: pointer;
 }
 
 .nav-item_activ {
@@ -204,7 +226,7 @@ button {
 
 .item_tv-link {
     display: block;
-    padding: 12px;
+
     text-decoration: none;
 }
 
@@ -339,7 +361,7 @@ img {
 
 /* tv styles*/
 .tv {
-
+ display: none;
 }
 
 .tv-channel {
@@ -480,15 +502,6 @@ img {
     /* or 22px */
     /* Gray 6 */
     color: #F2F2F2;
-}
-
-
-.hide-show {
-    display: none;
-}
-
-.hide-show:target {
-    display: block;
 }
 
 /* login styles*/

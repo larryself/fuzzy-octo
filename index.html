@@ -27,8 +27,12 @@
                 </form>
             </div>
             <div class="header_login">
-                <div>
-                    <button class="header_login-button login-btn btn" id="open">Войти</button>
+                <div id="notAutorized">
+                    <button class="header_login-button login-btn login-enter btn" id="enter">Войти</button>
+                </div>
+                <div id="autorized">
+                    <input type="text" value="Name" class="autorized-input">
+                    <button class="autorized-exit login-exit" id="exit">Выйти</button>
                 </div>
             </div>
         </div>
@@ -39,15 +43,14 @@
         <div class="main_wrapper">
             <ul class="main-nav">
                 <li class="nav-item nav_item-film nav-item_activ">
-                    <a href="#movi" class="item_tv-link item-tabs"><h2>Фильмы</h2></a>
+                    <h2>Фильмы</h2>
                 </li>
 
-                <li class="nav-item nav_item-tv nav-item_activ">
-                    <a href="#tvprog" class="item_tv-link item-tabs"><h2>Телеканалы</h2></a>
+                <li class="nav-item nav_item-tv">
+                    <h2>Телеканалы</h2>
                 </li>
-
             </ul>
-            <div class="movies hide-show" id="movi">
+            <div class="movies" id="movi">
                 <section class="section-movies">
                     <h3>&#128293; Новинки</h3>
                     <ul class="movies-description">
@@ -266,7 +269,7 @@
                 <label for="checkbox">Запомнить</label>
             </div>
             <div class="form-btn">
-                <button class="login-btn btn btn-modal" id="close">Войти</button>
+                <button class="login-enter btn btn-modal" id="close">Войти</button>
             </div>
         </form>
     </div>
