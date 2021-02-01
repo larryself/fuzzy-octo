@@ -119,6 +119,7 @@ button {
     width: 34%;
     display: flex;
     justify-content: space-between;
+    min-width: 200px;
 }
 
 .header-search_form {
@@ -251,6 +252,9 @@ button {
 }
 
 /* movies styles*/
+.movies {
+    display: block;
+}
 @media screen and (max-width: 1210px) {
     .section-movies {
         max-width: 640px;
@@ -433,7 +437,12 @@ img {
     border-radius: 8px;
     margin-bottom: 16px;
 }
-
+@media screen and (max-width: 800px) {
+    .channel {
+        flex-direction: column;
+        height: max-content;
+    }
+}
 .channel:last-child {
     margin-bottom: 0;
 }
@@ -445,7 +454,12 @@ img {
     align-items: center;
     justify-content: center;
 }
-
+@media screen and (max-width: 800px) {
+    .channel-logo {
+        width: 100%;
+        padding-top: 10px;
+    }
+}
 .channel-program {
     width: 66.1%;
     display: flex;
@@ -453,7 +467,13 @@ img {
     padding: 20px 0 19px;
     justify-content: space-between;
 }
-
+@media screen and (max-width: 800px) {
+    .channel-program {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
 .channel-name {
     font-weight: 500;
     font-size: 20px;
@@ -515,7 +535,6 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .phone {
