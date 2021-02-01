@@ -42,24 +42,23 @@
     <div class="wrapper">
         <div class="main_wrapper">
             <ul class="main-nav">
-                <li class="nav-item nav_item-film nav-item_activ">
+                <li class="nav-item nav_item-film nav-item_activ" id="item-movie">
                     <h2>Фильмы</h2>
                 </li>
-
-                <li class="nav-item nav_item-tv">
+                <li class="nav-item nav_item-tv" id="item-tv">
                     <h2>Телеканалы</h2>
                 </li>
             </ul>
             <div class="movies" id="movi">
                 <section class="section-movies">
-                    <h3>&#128293; Новинки</h3>
+                    <h3 class="section-movies-title">&#128293; Новинки</h3>
                     <ul class="movies-description">
                         <li class="movies-description_item">
                             <div class="poster">
                                 <img src="img/cat.png" alt="Кошка">
                                 <p class="descr text">Сдесь должно быть писание</p>
                             </div>
-                            <span>Мульт в кино. Выпуск №103. Некогда грустить!</span>
+                            <span class="movies-name">Мульт в кино. Выпуск №103. Некогда грустить!</span>
 
                         </li>
                         <li class="movies-description_item">
@@ -67,7 +66,7 @@
                                 <img src="img/batman.png" alt="Бэмэн">
                                 <p class="descr text">Сдесь должны быть описание</p>
                             </div>
-                            <span>Новый Бэтмен</span>
+                            <span class="movies-name">Новый Бэтмен</span>
 
                         </li>
                         <li class="movies-description_item">
@@ -78,7 +77,7 @@
                                     его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
                                     найти свое место в стремительно меняющемся мире киноиндустрии.</p>
                             </div>
-                            <span>Однажды... в Голливуде</span>
+                            <span class="movies-name">Однажды... в Голливуде</span>
 
                         </li>
                         <li class="movies-description_item">
@@ -86,7 +85,7 @@
                                 <img src="img/girl.png" alt="Девушка">
                                 <p class="descr text">Сдесь должно быть писание</p>
                             </div>
-                            <span>Стриптизёрши</span>
+                            <span class="movies-name">Стриптизёрши</span>
 
                         </li>
                     </ul>
@@ -266,7 +265,7 @@
             </div>
             <div class="form-checkobx">
                 <input type="checkbox" class="custom-checkbox" id="checkbox" value="remember">
-                <label for="checkbox">Запомнить</label>
+                <label for="checkbox" class="custom-checkbox-value">Запомнить</label>
             </div>
             <div class="form-btn">
                 <button class="login-enter btn btn-modal" id="close">Войти</button>
