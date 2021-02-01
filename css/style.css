@@ -69,7 +69,6 @@ body {
     }
 }
 
-
 .header-logo_link {
     display: flex;
     align-items: center;
@@ -140,15 +139,12 @@ button {
 
 .header-search_input::placeholder {
     font-weight: 400;
-
 }
-
 
 .header-search_button {
     background: transparent;
     border: none;
     color: #E5261E;
-
 }
 
 .search-btn {
@@ -211,7 +207,6 @@ button {
 .main {
     flex: 1 0 auto;
     padding: 32px 0 72px 0;
-
 }
 
 .main_wrapper {
@@ -238,16 +233,17 @@ button {
 
 .nav-item_activ {
     color: #E5261E;
+    padding-bottom: 0;
+}
+
+.nav-item_activ h2 {
+    padding-bottom: 8px;
+    border-bottom: 2px solid #E5261E;
 }
 
 .item_tv-link {
     display: block;
-
     text-decoration: none;
-}
-
-.item-tabs {
-
 }
 
 .item_tv-link:hover {
@@ -255,16 +251,8 @@ button {
 }
 
 /* movies styles*/
-.movies {
-}
-
-.section-movies {
-
-}
-
 @media screen and (max-width: 1210px) {
     .section-movies {
-
         max-width: 640px;
         margin: 0 auto
     }
@@ -274,7 +262,8 @@ button {
     padding: 6px 0 15px 0;
 }
 
-h3 {
+.section-movies-title,
+.genre-title {
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
@@ -322,7 +311,6 @@ h3 {
 
 @media screen and (max-width: 1210px) {
     .section-genre {
-
         max-width: 640px;
         margin: 0 auto
     }
@@ -377,7 +365,6 @@ img {
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    /* identical to box height */
     color: #FFFFFF;
     position: absolute;
     transform: translate(-50%, 0);
@@ -420,8 +407,12 @@ img {
     border-radius: 6px;
 }
 
+.emoji-link {
+    display: block;
+    height: 100%;
+}
+
 .bg:hover {
-    cursor: pointer;
     opacity: 100;
 }
 
@@ -565,8 +556,6 @@ img {
     font-size: 16px;
     line-height: 140%;
     border-radius: 8px;
-    /* or 22px */
-    /* Gray 6 */
     color: #F2F2F2;
 }
 
@@ -597,7 +586,6 @@ img {
 }
 
 .login-window {
-
     background: #FFFFFF;
     width: 304px;
     border-radius: 8px;
@@ -628,10 +616,11 @@ img {
     font-size: 16px;
     line-height: 19px;
 }
+
 .input-item::placeholder {
     font-weight: 400;
-
 }
+
 .form-checkobx {
     margin-bottom: 105px;
 }
@@ -661,7 +650,7 @@ img {
 
 .custom-checkbox:checked + label::before {
     border-color: #333333;
-    background-image: url(../img/check/Vector.png);
+    background-image: url(../img/checked.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
