@@ -42,15 +42,7 @@ const passwordValue = document.querySelector('.form-input_password').value;
 
 
 
-//localstorage
-const login = document.getElementsByClassName("form-input_login");
-const clickCheck = document.getElementsByClassName("custom-checkbox")[0];
-const truefalse = () => {
-    if (document.getElementsByClassName("custom-checkbox")[0].checked) {
-        console.log(document.querySelector('.form-input_login').value)
-    }
-}
-clickCheck.addEventListener( "click",truefalse);
+
 
 // tabs
 const tabs = document.querySelectorAll('.nav-item');
