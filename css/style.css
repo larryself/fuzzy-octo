@@ -162,14 +162,13 @@ button {
 .header-search_input {
     border: none;
     border-bottom: 1px solid #333333;
-    padding: 3px 0;
+    padding: 6px 0;
     width: 100%;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     background: inherit;
     align-self: center;
-}
 }
 
 .header-search_input::-webkit-input-placeholder {
@@ -559,7 +558,8 @@ img {
     border-radius: 8px;
     margin-bottom: 16px;
 }
- /* scrol-bar */
+
+/* scrol-bar */
 /* полоса прокрутки (скроллбар) */
 .tv-channel::-webkit-scrollbar {
     width: 8px; /* ширина для вертикального скролла */
@@ -579,6 +579,7 @@ img {
     background-color: #253861;
     width: 4px;
 }
+
 /* scrollber */
 @media screen and (max-width: 800px) {
     .channel {
