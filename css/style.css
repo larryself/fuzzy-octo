@@ -222,6 +222,9 @@ button {
     .header_login {
         width: 100%;
     }
+    .search-btn {
+        margin-right: 0;
+    }
 }
 
 .not-autorized {
