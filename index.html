@@ -27,12 +27,12 @@
                 </form>
             </div>
             <div class="header_login">
-                <div id="notAutorized">
-                    <button class="header_login-button login-btn login-enter btn" id="enter">Войти</button>
+                <div class="notAutorized js-notautorized-user-control">
+                    <button class="header_login-button login-enter btn js-open-form">Войти</button>
                 </div>
-                <div id="autorized">
+                <div class="autorized js-autorized-user-control">
                     <span class="autorized-input" id="aut-input"></span>
-                    <button class="autorized-exit login-exit" id="exit">Выйти</button>
+                    <button class="autorized-exit login-exit js-logout">Выйти</button>
                 </div>
             </div>
         </div>
@@ -55,32 +55,40 @@
                     <ul class="movies-description">
                         <li class="movies-description_item">
                             <div class="poster">
-                                <img src="img/cat.png" alt="Кошка">
-                                <p class="descr">Сдесь должно быть писание</p>
+                                <a href="#" class="poster-link">
+                                    <img src="img/imagecat.png" alt="Кошка">
+                                    <p class="descr">Сдесь должно быть писание</p>
+                                </a>
                             </div>
                             <span class="movies-name">Мульт в кино. Выпуск №103. Некогда грустить!</span>
                         </li>
                         <li class="movies-description_item">
                             <div class="poster">
-                                <img src="img/batman.png" alt="Бэмэн">
-                                <p class="descr">Сдесь должны быть описание</p>
+                                <a href="#" class="poster-link">
+                                    <img src="img/imagebatman.png" alt="Бэмэн">
+                                    <p class="descr">Сдесь должны быть описание</p>
+                                </a>
                             </div>
                             <span class="movies-name">Новый Бэтмен</span>
                         </li>
                         <li class="movies-description_item">
                             <div class="poster">
-                                <img src="img/hollywood.png" alt="Голливуд">
-                                <p class="descr">Фильм повествует о череде событий, произошедших в Голливуде в 1969
-                                    году, на закате
-                                    его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
-                                    найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                                <a href="#" class="poster-link">
+                                    <img src="img/imagehollywod.png" alt="Голливуд">
+                                    <p class="descr">Фильм повествует о череде событий, произошедших в Голливуде в 1969
+                                        году, на закате
+                                        его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
+                                        найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                                </a>
                             </div>
                             <span class="movies-name">Однажды... в Голливуде</span>
                         </li>
                         <li class="movies-description_item">
                             <div class="poster">
-                                <img src="img/girl.png" alt="Девушка">
-                                <p class="descr">Сдесь должно быть писание</p>
+                                <a href="#" class="poster-link">
+                                    <img src="img/imagestrip.png" alt="Девушка">
+                                    <p class="descr">Сдесь должно быть писание</p>
+                                </a>
                             </div>
                             <span class="movies-name">Стриптизёрши</span>
                         </li>
@@ -254,8 +262,8 @@
         </div>
     </div>
 </footer>
-<div class="modal" id="myModal">
-    <div class="modal-bg"></div>
+<div class="modal js-form-modal">
+    <div class="modal-bg js-bg-modal"></div>
     <div class="login-window window-center modal-content">
         <form action="">
             <h1 class="login-title">Вход</h1>
@@ -272,7 +280,7 @@
                 <label for="checkbox" class="custom-checkbox-value">Запомнить</label>
             </div>
             <div class="form-btn">
-                <button class="login-enter btn btn-modal" id="close">Войти</button>
+                <button class="login-enter btn btn-modal js-autorized-user">Войти</button>
             </div>
         </form>
     </div>
