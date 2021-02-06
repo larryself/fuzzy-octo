@@ -854,7 +854,7 @@
     opacity: 0;
 }
 
-.custom-checkbox + label {
+.custom-checkbox + .custom-checkbox-value {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -867,7 +867,7 @@
     user-select: none;
 }
 
-.custom-checkbox + label::before {
+.custom-checkbox + .custom-checkbox-value::before {
     content: '';
     display: inline-block;
     width: 16px;
@@ -878,7 +878,7 @@
     margin-right: 8px;
 }
 
-.custom-checkbox:checked + label::before {
+.custom-checkbox:checked + .custom-checkbox-value::before {
     border-color: #333333;
     background-image: url(../img/checked.png);
     background-position: 50% 50%;
