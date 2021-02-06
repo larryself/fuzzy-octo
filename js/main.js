@@ -33,14 +33,12 @@ modalWindow.addEventListener("click", ((closeModalForm) => loginFormModal.classL
 
 //  login
 const inputLogin = document.querySelector('.form-input-login');
-const inpitPassword = document.querySelector('.form-input-password');
-const userNameBox = document.querySelector('.js-user-name').value;
-
-
-
-const inputLoginValue = document.querySelector('.form-input-login').value;
-const passwordLoginValue = document.querySelector('.form-input-password').value;
-
+const inputPassword = document.querySelector('.form-input-password');
+const userNameBox = document.querySelector('.js-user-name');
+logginBtn.addEventListener("click", revers);
+function revers() {
+    userNameBox.textContent = inputLogin.value;
+};
 
 //localstorage
 const login = document.getElementsByClassName("form-input-login");
@@ -54,22 +52,38 @@ clickCheck.addEventListener("click", truefalse);
 
 
 // tabs
-const tabs = document.querySelectorAll('.nav-item');
-const content = document.querySelectorAll('.content');
-for (let i = 0; i < tabs.length; i++) {
-    (function (i) {
-        let tab = tabs[i];
-        tab.addEventListener("click", function () {
-            for (let j = 0; j < content.length; j++) {
-                let display = window.getComputedStyle(content[j]).display;
-                if (display === "block") {
-                    content[j].style.display = "none";
-                    tabs[j].classList.remove('nav-item-activ');
+// const tabs = document.querySelectorAll('.nav-item');
+// const content = document.querySelectorAll('.content');
+// for (let i = 0; i < tabs.length; i++) {
+//     (function (i) {
+//         let tab = tabs[i];
+//         tab.addEventListener("click", function () {
+//             for (let j = 0; j < content.length; j++) {
+//                 let display = window.getComputedStyle(content[j]).display;
+//                 if (display === "block") {
+//                     content[j].style.display = "none";
+//                     tabs[j].classList.remove('nav-item-activ');
+//
+//                 }
+//             }
+//             content[i].style.display = "block";
+//             tabs[i].classList.add('nav-item-activ')
+//         })
+//     })(i);
+// }
+const tabs = document.querySelectorAll(".nav-item");
+const tabContents = document.querySelectorAll(".content");
 
-                }
-            }
-            content[i].style.display = "block";
-            tabs[i].classList.add('nav-item-activ')
-        })
-    })(i);
-}
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const target = document.querySelector(tab.dataset.tabTarget);
+        tabContents.forEach((tabContent) => {
+            tabContent.classList.remove("active");
+        });
+        tabs.forEach((tab) => {
+            tab.classList.remove("nav-item-activ");
+        });
+        tab.classList.add("nav-item-activ");
+        target.classList.add("not-active");
+    });
+});
