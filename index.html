@@ -9,30 +9,30 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Видеосервис</title>
 </head>
-<body>
+<body class="page">
 <header class="header">
     <div class="wrapper">
         <div class="header-wrapper">
             <div class="header-logo">
-                <a href="#" class="header-logo_link link">
-                    <img src="img/logo2.svg" alt="Видеосервис" class="header-logo_pick">
-                    <h1 class="header-logo_item">Видеосервис</h1>
+                <a href="#" class="header-logo-link link">
+                    <img src="img/logo2.svg" alt="Видеосервис" class="header-logo-pick img-border">
+                    <h1 class="header-logo-item">Видеосервис</h1>
                 </a>
             </div>
             <div class="header-search">
-                <form action="#" class="header-search_form">
+                <form action="#" class="header-search-form">
                     <label class="sr-only" for="search">Поиск</label>
-                    <input type="text" id="search" placeholder="Поиск..." class="header-search_input">
-                    <button class="header-search_button search-btn">Найти</button>
+                    <input type="text" id="search" placeholder="Поиск..." class="header-search-input">
+                    <button class="header-search-button search-btn">Найти</button>
                 </form>
             </div>
-            <div class="header_login">
+            <div class="header-login">
                 <div class="notAutorized js-notautorized-user-control">
-                    <button class="header_login-button login-enter btn js-open-form">Войти</button>
+                    <button class="login-enter btn js-open-form btn-font">Войти</button>
                 </div>
                 <div class="autorized js-autorized-user-control">
-                    <span class="autorized-input" id="aut-input"></span>
-                    <button class="autorized-exit login-exit js-logout">Выйти</button>
+                    <span class="autorized-input js-user-name"></span>
+                    <button class="autorized-exit login-exit js-logout btn-font">Выйти</button>
                 </div>
             </div>
         </div>
@@ -40,41 +40,41 @@
 </header>
 <main class="main">
     <div class="wrapper">
-        <div class="main_wrapper">
+        <div class="main-wrapper">
             <ul class="main-nav">
-                <li class="nav-item nav_item-film nav-item_activ" id="item-movie">
-                    <h2>Фильмы</h2>
+                <li class="nav-item nav-item-activ">
+                    <h2 class="nav-item-title">Фильмы</h2>
                 </li>
-                <li class="nav-item nav_item-tv" id="item-tv">
-                    <h2>Телеканалы</h2>
+                <li class="nav-item">
+                    <h2 class="nav-item-title">Телеканалы</h2>
                 </li>
             </ul>
             <div class="movies content" id="movi">
                 <section class="section-movies">
                     <h3 class="section-movies-title">&#128293; Новинки</h3>
                     <ul class="movies-description">
-                        <li class="movies-description_item">
+                        <li class="movies-description-item">
                             <div class="poster">
                                 <a href="#" class="poster-link">
-                                    <img src="img/imagecat.png" alt="Кошка">
+                                    <img src="img/imagecat.png" alt="Кошка" class="img-border">
                                     <p class="descr">Сдесь должно быть писание</p>
                                 </a>
                             </div>
                             <span class="movies-name">Мульт в кино. Выпуск №103. Некогда грустить!</span>
                         </li>
-                        <li class="movies-description_item">
+                        <li class="movies-description-item">
                             <div class="poster">
                                 <a href="#" class="poster-link">
-                                    <img src="img/imagebatman.png" alt="Бэмэн">
+                                    <img src="img/imagebatman.png" alt="Бэмэн" class="img-border">
                                     <p class="descr">Сдесь должны быть описание</p>
                                 </a>
                             </div>
                             <span class="movies-name">Новый Бэтмен</span>
                         </li>
-                        <li class="movies-description_item">
+                        <li class="movies-description-item">
                             <div class="poster">
                                 <a href="#" class="poster-link">
-                                    <img src="img/imagehollywod.png" alt="Голливуд">
+                                    <img src="img/imagehollywod.png" alt="Голливуд" class="img-border">
                                     <p class="descr">Фильм повествует о череде событий, произошедших в Голливуде в 1969
                                         году, на закате
                                         его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются
@@ -83,10 +83,10 @@
                             </div>
                             <span class="movies-name">Однажды... в Голливуде</span>
                         </li>
-                        <li class="movies-description_item">
+                        <li class="movies-description-item">
                             <div class="poster">
                                 <a href="#" class="poster-link">
-                                    <img src="img/imagestrip.png" alt="Девушка">
+                                    <img src="img/imagestrip.png" alt="Девушка" class="img-border">
                                     <p class="descr">Сдесь должно быть писание</p>
                                 </a>
                             </div>
@@ -98,40 +98,40 @@
                     <h3 class="genre-title">Жанры</h3>
                     <ul class="genre">
                         <li class="emoji">
-                            <div class="bg bg_emoji_grinning">
+                            <div class="bg bg-emoji-grinning">
                                 <a href="#" class="emoji-link">
                                     <img src="img/grinning.png"
-                                         class="emoji-img"
+                                         class="emoji-img img-border"
                                          alt="grinning">
                                     <span class="emoji-text">Комедии</span>
                                 </a>
                             </div>
                         </li>
                         <li class="emoji">
-                            <div class="bg bg_emoji_crying">
+                            <div class="bg bg-emoji-crying">
                                 <a href="#" class="emoji-link">
                                     <img src="img/crying.png"
-                                         class="emoji-img"
+                                         class="emoji-img img-border"
                                          alt="crying">
                                     <span class="emoji-text">Драмы</span>
                                 </a>
                             </div>
                         </li>
                         <li class="emoji">
-                            <div class="bg bg_emoji_alien">
+                            <div class="bg bg-emoji-alien">
                                 <a href="#" class="emoji-link">
                                     <img src="img/alien.png"
-                                         class="emoji-img"
+                                         class="emoji-img img-border"
                                          alt="alien">
                                     <span class="emoji-text">Фантастика</span>
                                 </a>
                             </div>
                         </li>
                         <li class="emoji">
-                            <div class="bg bg_emoji_ghost">
+                            <div class="bg bg-emoji-ghost">
                                 <a href="#" class="emoji-link">
                                     <img src="img/ghost.png"
-                                         class="emoji-img"
+                                         class="emoji-img img-border"
                                          alt="ghost">
                                     <span class="emoji-text">Ужасы</span>
                                 </a>
@@ -144,7 +144,7 @@
                 <ul class="tv-channel">
                     <li class="channel">
                         <div class="channel-logo">
-                            <img src="img/one.png" alt="Первый канал" class="channel-logo_img">
+                            <img src="img/one.png" alt="Первый канал" class="channel-logo-img img-border">
                         </div>
                         <div class="channel-program">
                             <h3 class="channel-name">Первый канал</h3>
@@ -160,83 +160,83 @@
                     </li>
                     <li class="channel">
                         <div class="channel-logo">
-                            <img src="img/2x2.png" alt="2х2" class="channel-logo-img">
+                            <img src="img/2x2.png" alt="2х2" class="channel-logo-img img-border">
                         </div>
                         <div class="channel-program">
                             <h3 class="channel-name">2x2</h3>
-                            <div class="program">
-                                <div class="program-item"><span class="time">13:00</span><span>МУЛЬТ ТВ. Сезон 4, 7 серия</span>
-                                </div>
-                                <div class="program-item">
+                            <ul class="program">
+                                <li class="program-item"><span class="time">13:00</span><span>МУЛЬТ ТВ. Сезон 4, 7 серия</span>
+                                </li>
+                                <li class="program-item">
                                     <span class="time">14:00</span><span>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</span>
-                                </div>
-                                <div class="program-item"><span class="time">15:00</span><span>БУРДАШЕВ. Сезон 1, 20 серия</span>
-                                </div>
-                            </div>
+                                </li>
+                                <li class="program-item"><span class="time">15:00</span><span>БУРДАШЕВ. Сезон 1, 20 серия</span>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="channel">
                         <div class="channel-logo">
-                            <img src="img/rbc.png" alt="рбк" class="channel-logo-img">
+                            <img src="img/rbc.png" alt="рбк" class="channel-logo-img img-border">
                         </div>
                         <div class="channel-program">
                             <h3 class="channel-name">РБК</h3>
-                            <div class="program">
-                                <div class="program-item"><span class="time">13:00</span><span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</span>
-                                </div>
-                                <div class="program-item"><span class="time">14:00</span><span>ДЕНЬ. Главные темы</span>
-                                </div>
-                                <div class="program-item"><span class="time">15:00</span><span>Главные новости</span>
-                                </div>
-                            </div>
+                            <ul class="program">
+                                <li class="program-item"><span class="time">13:00</span><span>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</span>
+                                </li>
+                                <li class="program-item"><span class="time">14:00</span><span>ДЕНЬ. Главные темы</span>
+                                </li>
+                                <li class="program-item"><span class="time">15:00</span><span>Главные новости</span>
+                                </li>
+                            </ul>
                         </div>
                     </li>
                     <li class="channel">
                         <div class="channel-logo">
-                            <img src="img/amedia.png" alt="амедиа" class="channel-logo-img">
+                            <img src="img/amedia.png" alt="амедиа" class="channel-logo-img img-border">
                         </div>
                         <div class="channel-program">
                             <h3 class="channel-name">AMEDIA PREMIUM</h3>
-                            <div class="program">
-                                <div class="program-item"><span
-                                        class="time">13:00</span><span>Клиент всегда мёртв</span></div>
-                                <div class="program-item"><span class="time">14:00</span><span>Голодные игры: Сойка-пересмешница. Часть I</span>
-                                </div>
-                                <div class="program-item"><span
-                                        class="time">15:00</span><span>Секс в большом городе</span></div>
-                            </div>
+                            <ul class="program">
+                                <li class="program-item"><span
+                                        class="time">13:00</span><span>Клиент всегда мёртв</span></li>
+                                <li class="program-item"><span class="time">14:00</span><span>Голодные игры: Сойка-пересмешница. Часть I</span>
+                                </li>
+                                <il class="program-item"><span
+                                        class="time">15:00</span><span>Секс в большом городе</span></il>
+                            </ul>
                         </div>
                     </li>
                     <li class="channel">
                         <div class="channel-logo">
-                            <img src="img/rbc.png" alt="рбс" class="channel-logo-img">
+                            <img src="img/rbc.png" alt="рбс" class="channel-logo-img img-border">
                         </div>
                         <div class="channel-program">
                             <h3 class="channel-name">РБК</h3>
-                            <div class="program">
-                                <div class="program-item"><span
-                                        class="time">13:00</span><span>Клиент всегда мёртв</span></div>
-                                <div class="program-item"><span class="time">14:00</span><span>Голодные игры: Сойка-пересмешница. Часть I</span>
-                                </div>
-                                <div class="program-item"><span
-                                        class="time">15:00</span><span>Секс в большом городе</span></div>
-                            </div>
+                            <ul class="program">
+                                <li class="program-item"><span
+                                        class="time">13:00</span><span>Клиент всегда мёртв</span></li>
+                                <li class="program-item"><span class="time">14:00</span><span>Голодные игры: Сойка-пересмешница. Часть I</span>
+                                </li>
+                                <li class="program-item"><span
+                                        class="time">15:00</span><span>Секс в большом городе</span></li>
+                            </ul>
                         </div>
                     </li>
                     <li class="channel">
                         <div class="channel-logo">
-                            <img src="img/2x2.png" alt="2х2" class="channel-logo-img">
+                            <img src="img/2x2.png" alt="2х2" class="channel-logo-img img-border">
                         </div>
                         <div class="channel-program">
                             <h3 class="channel-name">2x2</h3>
-                            <div class="program">
-                                <div class="program-item"><span
-                                        class="time">13:00</span><span>Клиент всегда мёртв</span></div>
-                                <div class="program-item"><span class="time">14:00</span><span>Голодные игры: Сойка-пересмешница. Часть I</span>
-                                </div>
-                                <div class="program-item"><span
-                                        class="time">15:00</span><span>Секс в большом городе</span></div>
-                            </div>
+                            <ul class="program">
+                                <li class="program-item"><span
+                                        class="time">13:00</span><span>Клиент всегда мёртв</span></li>
+                                <li class="program-item"><span class="time">14:00</span><span>Голодные игры: Сойка-пересмешница. Часть I</span>
+                                </li>
+                                <li class="program-item"><span
+                                        class="time">15:00</span><span>Секс в большом городе</span></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -246,10 +246,10 @@
 </main>
 <footer class="footer">
     <div class="wrapper">
-        <div class="footer_wrapper">
-            <div class="footer_logo">
-                <a href="https://htc-cs.ru/" class="footer_logo-link link">
-                    <img src="img/vector.svg" alt="htc" class="footer_logo-pick">
+        <div class="footer-wrapper">
+            <div class="footer-logo">
+                <a href="https://htc-cs.ru/" class="footer-logo-link link">
+                    <img src="img/vector.svg" alt="htc" class="footer-logo-pick img-border">
                 </a>
             </div>
             <address class="contacs">
@@ -257,7 +257,7 @@
                     «Металлург»)</p>
                 <span class="contacs-phone"><a href="tel:+73412938861" class="phone link">+7 (3412) 93-88-61</a>, <a
                         href="tel:+73412432929" class="phone link">43-29-29</a></span>
-                <a class="contacs_link link" href="https://htc-cs.ru/" target="_blank">htc-cs.ru</a>
+                <a class="contacs-link link" href="https://htc-cs.ru/" target="_blank">htc-cs.ru</a>
             </address>
         </div>
     </div>
@@ -269,18 +269,18 @@
             <h1 class="login-title">Вход</h1>
             <div class="form-input">
                 <label for="login" class="sr-only">Логин</label>
-                <input type="text" id="login" class="form-input_login input-item" placeholder="Логин">
+                <input type="text" id="login" class="form-input-login input-item" placeholder="Логин">
             </div>
             <div class="form-input">
                 <label for="pass" class="sr-only">Пароль</label>
-                <input type="password" id="pass" class="form-input_password input-item" placeholder="Пароль">
+                <input type="password" id="pass" class="form-input-password input-item" placeholder="Пароль">
             </div>
             <div class="form-checkobx">
                 <input type="checkbox" class="custom-checkbox" id="checkbox" value="remember">
                 <label for="checkbox" class="custom-checkbox-value">Запомнить</label>
             </div>
             <div class="form-btn">
-                <button class="login-enter btn btn-modal js-autorized-user">Войти</button>
+                <button class="login-enter btn btn-modal js-autorized-user btn-font">Войти</button>
             </div>
         </form>
     </div>

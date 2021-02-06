@@ -7,20 +7,20 @@ const btnLogin = document.querySelector(".js-notautorized-user-control");
 const btnExit = document.querySelector(".js-logout");
 const modalWindow = document.querySelector('.js-bg-modal');
 
-function loginFormOn(e) {
-    e.preventDefault();
+function loginFormOn(evt) {
+    evt.preventDefault();
     loginFormModal.classList.add('active');
 }
 
-function loginFormOff(e) {
-    e.preventDefault();
+function loginFormOff(evt) {
+    evt.preventDefault();
     loginFormModal.classList.remove('active');
     authorizedUserControl.classList.add('active');
     btnLogin.classList.add('not-active');
 }
 
-function exitInLK(e) {
-    e.preventDefault();
+function exitInLK(evt) {
+    evt.preventDefault();
     btnLogin.classList.remove('not-active');
     authorizedUserControl.classList.remove('active');
     btnLogin.classList.add('active');
@@ -32,25 +32,22 @@ logginBtn.addEventListener("click", loginFormOff);
 modalWindow.addEventListener("click", ((closeModalForm) => loginFormModal.classList.remove('active')));
 
 //  login
-const inputLogin = document.querySelector('.form-input_login');
-const inpitPassword = document.querySelector('.form-input_password');
-const log = document.getElementById('aut-input');
-inputLogin.addEventListener('input', updateValue);
+const inputLogin = document.querySelector('.form-input-login');
+const inpitPassword = document.querySelector('.form-input-password');
+const userNameBox = document.querySelector('.js-user-name').value;
 
-function updateValue(e) {
-    log.textContent = e.target.value;
-}
 
-const inputValue = document.querySelector('.form-input_login').value;
-const passwordValue = document.querySelector('.form-input_password').value;
+
+const inputLoginValue = document.querySelector('.form-input-login').value;
+const passwordLoginValue = document.querySelector('.form-input-password').value;
 
 
 //localstorage
-const login = document.getElementsByClassName("form-input_login");
+const login = document.getElementsByClassName("form-input-login");
 const clickCheck = document.getElementsByClassName("custom-checkbox")[0];
 const truefalse = () => {
     if (document.getElementsByClassName("custom-checkbox")[0].checked) {
-        console.log(document.querySelector('.form-input_login').value)
+        localStorage.setItem("user", inputLoginValue);
     }
 }
 clickCheck.addEventListener("click", truefalse);
@@ -67,12 +64,12 @@ for (let i = 0; i < tabs.length; i++) {
                 let display = window.getComputedStyle(content[j]).display;
                 if (display === "block") {
                     content[j].style.display = "none";
-                    tabs[j].classList.remove('nav-item_activ');
+                    tabs[j].classList.remove('nav-item-activ');
 
                 }
             }
             content[i].style.display = "block";
-            tabs[i].classList.add('nav-item_activ')
+            tabs[i].classList.add('nav-item-activ')
         })
     })(i);
 }
