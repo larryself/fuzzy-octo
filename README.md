@@ -6,8 +6,7 @@ https://larryself.github.io/videoService/
 видеосервиса.
 
 Ссылка на макет:
-https://www.figma.com/file/b5ohHLqIOL1oOM9bS1eqFQ/test-task-frontend-junior?node-id=
-4%3A21
+https://www.figma.com/file/b5ohHLqIOL1oOM9bS1eqFQ/test-task-frontend-junior?node-id=4%3A21
 
 Что нужно сделать:
 1. Реализовать переключение между табами;
