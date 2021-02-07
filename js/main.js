@@ -146,7 +146,6 @@ function saveNameChange() {
         evt.preventDefault();
         exitNameChange();
     });
-
 }
 
 function changeUserName() {

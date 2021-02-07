@@ -579,7 +579,7 @@
 }
 
 .bg:hover {
-    opacity: 100;
+    opacity: 1.0;
 }
 
 /* tv styles*/
