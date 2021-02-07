@@ -164,13 +164,13 @@ formChangeUserName.addEventListener("submit", function (evt) {
     }
 });
 
-inputChangeUserName.addEventListener("blur", () => {
+inputChangeUserName.addEventListener("blur", function () {
     if (inputChangeUserName.value.length === 0) {
         inputChangeUserName.classList.add("bad-name");
         inputChangeUserName.focus();
     } else {
-        inputChangeUserName.classList.remove("bad-name")
-        exitNameChange()
+        inputChangeUserName.classList.remove("bad-name");
+        exitNameChange();
     }
 });
 inputChangeUserName.addEventListener("change", saveNameChange);
