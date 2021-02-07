@@ -155,22 +155,23 @@ function saveNameChange() {
 
 formChangeUserName.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    if (inputChangeUserName.value.length !== 0) {
+    if (inputChangeUserName.value.length === 0) {
+        inputChangeUserName.classList.add("bad-name");
+        inputChangeUserName.focus();
+    } else {
         inputChangeUserName.classList.remove("bad-name")
         exitNameChange()
     }
-    inputChangeUserName.classList.add("bad-name");
-    inputChangeUserName.focus();
-
 });
 
 inputChangeUserName.addEventListener("blur", () => {
-    if (inputChangeUserName.value.length !== 0) {
+    if (inputChangeUserName.value.length === 0) {
+        inputChangeUserName.classList.add("bad-name");
+        inputChangeUserName.focus();
+    } else {
         inputChangeUserName.classList.remove("bad-name")
         exitNameChange()
     }
-    inputChangeUserName.classList.add("bad-name");
-    inputChangeUserName.focus();
 });
 inputChangeUserName.addEventListener("change", saveNameChange);
 
