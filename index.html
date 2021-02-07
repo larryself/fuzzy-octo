@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-widthgt, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -19,19 +19,24 @@
                 </a>
             </div>
             <div class="header-search">
-                <form action="#" class="header-search-form">
+                <form action="#" class="header-search-form" method="post">
                     <label class="sr-only" for="search">Поиск</label>
                     <input type="text" id="search" placeholder="Поиск..." class="header-search-input">
-                    <button class="header-search-button search-btn">Найти</button>
+                    <button class="header-search-button search-btn btn-font">Найти</button>
                 </form>
             </div>
             <div class="header-login">
-                <div class="notAutorized js-notautorized-user-control">
-                    <button class="login-enter btn js-open-form btn-font">Войти</button>
+                <div class="user-name-box js-user-name-box active">
+                    <form action="#" class="js-form-user-name-change js-formaKissMyAss">
+                        <label for="nameUser" class="sr-only">Имя Пользрвателя</label>
+                        <input type="text" id="nameUser" class="user-name-change js-change-user-name-input">
+                    </form>
+                    <span class="user-name-nochange js-user-name"></span>
                 </div>
-                <div class="autorized js-autorized-user-control">
-                    <span class="autorized-input js-user-name"></span>
-                    <button class="autorized-exit login-exit js-logout btn-font">Выйти</button>
+                <div class="autorized js-btn-in-out">
+                    <button class="header-login-enter login-enter btn js-open-form-btn-open btn-font active">Войти
+                    </button>
+                    <button class="autorized-exit login-exit js-logout-btn-exit btn-font">Выйти</button>
                 </div>
             </div>
         </div>
@@ -41,14 +46,18 @@
     <div class="wrapper">
         <div class="main-wrapper">
             <ul class="main-nav">
-                <li class="nav-item nav-item-activ">
-                    <h2 class="nav-item-title">Фильмы</h2>
+                <li class="nav-item nav-item-active js-tab" data-tab-target="movies">
+                    <a href="#" class="nav-item-link">
+                        <h2 class="nav-item-title">Фильмы</h2>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <h2 class="nav-item-title">Телеканалы</h2>
+                <li class="nav-item js-tab" data-tab-target="channels">
+                    <a href="#" class="nav-item-link">
+                        <h2 class="nav-item-title">Телеканалы</h2>
+                    </a>
                 </li>
             </ul>
-            <div class="movies active content">
+            <div class="movies active content js-content" data-tab-target="movies">
                 <section class="section-movies">
                     <h3 class="section-movies-title">&#128293; Новинки</h3>
                     <ul class="movies-description">
@@ -139,7 +148,7 @@
                     </ul>
                 </section>
             </div>
-            <div class="tv content">
+            <div class="tv content js-content" data-tab-target="channels">
                 <ul class="tv-channel">
                     <li class="channel">
                         <div class="channel-logo">
@@ -264,22 +273,22 @@
 <div class="modal js-form-modal">
     <div class="modal-bg js-bg-modal"></div>
     <div class="login-window window-center modal-content">
-        <form action="#">
+        <form action="#" class="js-login-form">
             <h1 class="login-title">Вход</h1>
             <div class="form-input">
                 <label for="login" class="sr-only">Логин</label>
-                <input type="text" id="login" class="form-input-login input-item" placeholder="Логин">
+                <input type="text" id="login" class="form-input-login input-item" required placeholder="Логин">
             </div>
             <div class="form-input">
                 <label for="pass" class="sr-only">Пароль</label>
-                <input type="password" id="pass" class="form-input-password input-item" placeholder="Пароль">
+                <input type="password" id="pass" class="form-input-password input-item" required placeholder="Пароль">
             </div>
             <div class="form-checkobx">
                 <input type="checkbox" class="custom-checkbox" id="checkbox" value="remember">
                 <label for="checkbox" class="custom-checkbox-value">Запомнить</label>
             </div>
             <div class="form-btn">
-                <button class="login-enter btn btn-modal js-autorized-user btn-font">Войти</button>
+                <button type="submit" class="login-enter btn btn-modal btn-font">Войти</button>
             </div>
         </form>
     </div>

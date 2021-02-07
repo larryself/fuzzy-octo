@@ -16,7 +16,6 @@
     url('../fonts/rubik-v11-latin_cyrillic-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/rubik-v11-latin_cyrillic-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-
 .page {
     height: 100%;
     display: -webkit-box;
@@ -210,6 +209,7 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -223,14 +223,12 @@
 
     .search-btn {
         margin-right: 0;
+        padding-right: 0;
     }
 }
 
-.not-autorized {
-    display: block;
-}
-
-.autorized {
+.header-login-enter,
+.login-exit {
     display: none;
 }
 
@@ -254,13 +252,28 @@
     background: #CC221B;
 }
 
-.autorized-input {
+.login-exit:hover {
+    opacity: 0.8;
+}
+
+.user-name-nochange,
+.user-name-change {
     border: none;
     color: #333333;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     text-align: end;
+    display: none;
+}
+
+.user-name-nochange {
+    padding: 9px 0 10px;
+}
+
+.user-name-change {
+    padding: 6px 0;
+    border-bottom: 1px solid #333333;
 }
 
 /* main styles */
@@ -302,14 +315,22 @@
     cursor: pointer;
 }
 
-.nav-item-activ {
+.nav-item-active {
     color: #E5261E;
     padding-bottom: 0;
 }
 
-.nav-item-activ .nav-item-title {
+.nav-item-active .nav-item-title {
     padding-bottom: 8px;
     border-bottom: 2px solid #E5261E;
+}
+
+.nav-item-link {
+    text-decoration: none;
+}
+
+.nav-item-link:visited {
+    color: inherit;
 }
 
 .item-tv-link {
@@ -323,7 +344,7 @@
 
 /* movies styles*/
 .movies {
-    display: block;
+    display: none;
 }
 
 @media screen and (max-width: 1210px) {
@@ -566,11 +587,13 @@
     display: none;
     margin-right: -17px;
 }
+
 @media screen and (max-width: 1200px) {
     .tv {
         margin-right: 0px;
     }
 }
+
 .tv-channel {
     overflow: auto;
     height: 696px;
