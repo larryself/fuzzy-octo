@@ -269,6 +269,10 @@
 
 .user-name-nochange {
     padding: 9px 0 10px;
+    max-width: 125px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .user-name-change {
