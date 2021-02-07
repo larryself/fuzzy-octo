@@ -111,14 +111,16 @@ function exitInLK(evt) {
 btnExit.addEventListener("click", exitInLK); // tabs
 
 var tabs = document.querySelectorAll(".js-tab");
+var tabsArray = Array.prototype.slice.call(tabs);
 var tabContents = document.querySelectorAll(".js-content");
-tabs.forEach(function (tab) {
+var tabContentsArray = Array.prototype.slice.call(tabContents);
+tabsArray.forEach(function (tab) {
     tab.addEventListener("click", function () {
         if (tab.classList.contains("nav-item-active")) {
             return;
         }
 
-        tabs.forEach(function (currentTab) {
+        tabsArray.forEach(function (currentTab) {
             if (currentTab === tab) {
                 currentTab.classList.add("nav-item-active");
             } else {
@@ -127,7 +129,7 @@ tabs.forEach(function (tab) {
         });
         tab.classList.add("nav-item-active");
         var target = tab.dataset.tabTarget;
-        tabContents.forEach(function (tabContent) {
+        tabContentsArray.forEach(function (tabContent) {
             var isTarget = tabContent.dataset.tabTarget === target;
 
             if (isTarget) {
