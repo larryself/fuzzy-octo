@@ -936,3 +936,7 @@
 .not-active {
     display: none;
 }
+.bad-name {
+    border: 1px solid #E5261E;
+    border-bottom-color: #E5261E;
+}

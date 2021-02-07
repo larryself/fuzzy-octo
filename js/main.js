@@ -18,7 +18,8 @@ var closeLoginFormModal = function closeLoginFormModal() {
 var loginFormModalOverlay = document.querySelector(".js-bg-modal");
 loginFormModalOverlay.addEventListener("click", function () {
     return closeLoginFormModal();
-}); // Работа с localStorage
+});
+// Работа с localStorage
 
 var authStateKey = "authState";
 
@@ -41,9 +42,14 @@ var getAuthorizedState = function getAuthorizedState() {
     var authParsed = JSON.parse(auth);
 
     if (authParsed.authorized) {
+        if (authParsed.username.length > 0) {
+            return {
+                authorized: true,
+                username: authParsed.username
+            };
+        }
         return {
-            authorized: true,
-            username: authParsed.username
+            authorized: false
         };
     }
 
@@ -54,8 +60,8 @@ var getAuthorizedState = function getAuthorizedState() {
 
 var clearAuthState = function clearAuthState() {
     localStorage.clear(authStateKey);
-}; // Авторизация
-
+};
+// Авторизация
 
 var loginForm = document.querySelector(".js-login-form");
 var authorizedUserBox = document.querySelector(".js-logout-btn-exit");
@@ -88,9 +94,9 @@ function authorize() {
 loginForm.addEventListener("submit", function (e) {
     e.preventDefault();
     authorize(); // очищаем форму
-
     loginForm.reset();
-}); //Выход из авторизованного состояния
+});
+//Выход из авторизованного состояния
 
 var btnExit = document.querySelector(".js-logout-btn-exit");
 
@@ -145,14 +151,29 @@ function exitNameChange() {
 function saveNameChange() {
     saveAuthorizedStateToLocalStorage(inputChangeUserName.value);
     userNameSpan.textContent = inputChangeUserName.value;
-    inputChangeUserName.addEventListener("blur", exitNameChange);
-    formChangeUserName.addEventListener("submit", function (evt) {
-        evt.preventDefault();
-        exitNameChange();
-    });
 }
-inputChangeUserName.addEventListener("blur", exitNameChange);
+
+formChangeUserName.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    if (inputChangeUserName.value.length !== 0) {
+        inputChangeUserName.classList.remove("bad-name")
+        exitNameChange()
+    }
+    inputChangeUserName.classList.add("bad-name");
+    inputChangeUserName.focus();
+
+});
+
+inputChangeUserName.addEventListener("blur", () => {
+    if (inputChangeUserName.value.length !== 0) {
+        inputChangeUserName.classList.remove("bad-name")
+        exitNameChange()
+    }
+    inputChangeUserName.classList.add("bad-name");
+    inputChangeUserName.focus();
+});
 inputChangeUserName.addEventListener("change", saveNameChange);
+
 function changeUserName() {
     inputChangeUserName.value = userNameSpan.textContent;
     inputChangeUserName.classList.add("active");
