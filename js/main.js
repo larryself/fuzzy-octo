@@ -84,6 +84,7 @@ if (authStatus.authorized) {
 function authorize() {
     var inputLogin = document.querySelector(".form-input-login");
     var username = inputLogin.value;
+    var checkbox = document.querySelector(".custom-checkbox");
     if (checkbox.checked) {
         saveAuthorizedStateToLocalStorage(username);
     }
